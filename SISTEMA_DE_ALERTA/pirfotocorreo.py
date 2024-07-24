@@ -26,8 +26,8 @@ def capturar_imagen(ruta_imagen):
     return True
 
 def enviar_correo(destinatario, asunto, mensaje, ruta_foto):
-    remitente = 'andrescaizab@gmail.com'
-    contrasena = 'pyvbohwfkzcqfnio'  # Asegúrate de que esta es la contraseña de aplicación sin espacios
+    remitente = 'Colocar el correo emisor'
+    contrasena = 'Colocar la contraseña de 16 caracteres'  # Asegúrate de que esta es la contraseña de aplicación sin espacios
 
     # Crear el mensaje
     msg = MIMEMultipart()
@@ -70,7 +70,7 @@ def main():
                 print("Movimiento detectado!")
                 ruta_imagen = 'imagen.jpg'
                 if capturar_imagen(ruta_imagen):
-                    enviar_correo('andyjhonson.caiza28@gmail.com', 'Alerta de Movimiento', 'El sensor PIR a detectado movimiento', ruta_imagen)
+                    enviar_correo('Colocar el correo Receptor', 'Alerta de Movimiento', 'El sensor PIR a detectado movimiento', ruta_imagen)
                 # Esperar 60 segundos para evitar múltiples capturas en un corto período
                 time.sleep(60)
             else:
